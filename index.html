@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- 
+YOU ARE FREE TO USE THIS FOR COMMERCIAL OR NON-COMMERCIAL PURPOSE.
+PLEASE MAKE SURE TO RETAIN THE COPYRIGHT NOTICE AND PROVIDE CREDITS
+TO ORIGINAL AUTHOR WHEREVER APPLICABLE.
+
+AUTHOR: Prasad.A (http://code.google.com/p/i18n-translator)
+-->
+<html>
+	<head>
+		<title>Language Translator</title>    
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+		<link rel="stylesheet" type="text/css" media="all" href="assets/960/reset.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="assets/960/text.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="assets/960/960.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="assets/style.css" />
+		
+		<style type="text/css">
+		.container_16 p { border: 1px solid red; }
+		.container_12 p { border: 1px solid blue; }
+		</style>
+	</head>
+  
+	<body>
+  
+		<div class="container_12">
+			<div class="grid_12">
+				<h1>Language Translator</h1>
+			</div>
+		</div>
+  
+		<div class="container_16">
+			<div class="grid_2">&nbsp;</div>
+			<div class="grid_12">
+				<textarea type="text" name="q" id="q" style="width: 98%;" title="your input..."></textarea>
+				<center>
+					<select name="slang" id="slang">
+						<option value="en">English</option>
+					</select>
+					<button onclick="tr();">Translate &#187;</button>
+					<select name="tlang" id="tlang">
+						<option value="ru">Russian</option>
+					</select>
+					<button onclick="tr(true);" class="right">Verify</button>					
+				</center>
+			</div>
+			<div class="grid_2">&nbsp;</div>
+	</div>
+
+	<div class="container_12">     
+		<div class="grid_4" id="gtr">
+			<h4><a href="http://translate.google.com" target="_blank">Google</a> <img src="assets/images/loading.gif" id="gtrloading"></h4>
+			<h6 id="gtrnow"></h6>
+			<h6 id="gtrchk"></h6>
+		</div>      
+		<div class="grid_4">
+			<h4><a href="http://babelfish.yahoo.com" target="_blank">Yahoo</a> <img src="assets/images/loading.gif" id="ytrloading"></h4>
+			<iframe id="yi" style="display:none"></iframe>
+			<h6 id="ytrnow"></h6>
+			<h6 id="ytrchk"></h6>
+		</div>      
+		<div class="grid_4">
+			<h4><a href="http://www.microsofttranslator.com/?ref=TThis" target="_blank">Bing</a> <img src="assets/images/loading.gif" id="wtrloading"></h4>
+			<h6 id="wtrnow"></h6>
+			<h6 id="wtrchk"></h6>
+		</div>      
+	</div>
+
+	<div id="history">
+		<div class="container_12">
+			<div class="grid_12">
+				<h4>History</h4>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->	
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>    
+	<script type="text/javascript" src="jquery/jquery.printf.js"></script>  	    
+	
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="assets/translate.js"></script>
+    	    
+	<script type="text/javascript">
+	$(document).ready(function() {
+    	$('#q').focus();
+    	
+    	/* Update user about config requried */
+    	var bingappId = config_bing_appid();
+		if (bingappId.length == 0) {
+			$('#wtrloading').parent().append('<sup><i>APPID not configured!</i></sup>');
+		}
+	});
+	</script>  
+
+
+</body>
+</html>

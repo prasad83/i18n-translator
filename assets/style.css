@@ -1,0 +1,53 @@
+/**
+ * YOU ARE FREE TO USE THIS FOR COMMERCIAL OR NON-COMMERCIAL PURPOSE.
+ * PLEASE MAKE SURE TO RETAIN THE COPYRIGHT NOTICE AND PROVIDE CREDITS
+ * TO ORIGINAL AUTHOR WHEREVER APPLICABLE.
+ * AUTHOR: Prasad.A (http://code.google.com/p/i18n-translator)
+ */
+body {
+	font: normal 12px Arial,sans-serif;
+}
+h4 {
+	border-bottom: 1px solid gray;
+}
+
+h6 {
+	margin: 0; padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #0070BA;
+}
+
+sup {
+	font-size: small;
+	vertical-align: top;
+}
+
+#q {
+	border: 2px solid black;
+	font: inherit;
+	font-size: 14px;
+}
+
+#gtrloading, #ytrloading, #wtrloading { display: none; }
+#gtrnow, #ytrnow, #wtrnow { background: #FFFACD; }
+#gtrchk, #ytrchk, #wtrchk { background: #FFDAB9; }
+
+#history {
+	clear: both;
+	color: gray;
+}
+
+#history h4 {	
+	border: 0;
+	border-bottom: 1px solid lightgray;	
+	margin: 0;
+	margin-top: 10px;	
+}
+
+.right {
+	float: right;
+	margin-right: 10px;
+}

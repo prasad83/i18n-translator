@@ -1,0 +1,18 @@
+Following libraries have been used in the build this tool.
+Thanks to the creators and contributors.
+
+Zend_JSON (http://www.zend.com)
+Under: http://framework.zend.com/license/new-bsd
+
+curl_http_client (http://www.phpclasses.org/package/3329-PHP-HTTP-client-using-the-PHP-Curl-library.html)
+Under: BSD License
+
+jquery (http://jquery.com)
+Under: MIT License
+
+jquery.printf (http://mjslib.com)
+Under: BSD License
+
+960.gs (http://960.gs/)
+Under: MIT License
+
